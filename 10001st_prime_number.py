@@ -1,3 +1,6 @@
+#wrote this to find the m^th prime number
+
+#this function determines whether a number is prime
 def is_prime(n):
     ans=True
     a=int(n**(1/2))
@@ -9,10 +12,11 @@ def is_prime(n):
 
 i=1
 a=2
-while i <=10001:
+m=10001
+while i <=m:
     if is_prime(a):
         i=i+1
     a=a+1
 print(a-1)
 
-print(is_prime(104743))
+#print(is_prime(104743))
