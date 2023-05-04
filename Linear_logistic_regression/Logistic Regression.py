@@ -145,7 +145,7 @@ b=0
 c_v=[cost_function(X,y,w,b)] #vector with the cost for each iteration
 l_v=[[w,b]] # vector with the value of the parameters for each iteration
 
-for i in range(10000+1): #doing ?+1 iterations
+for i in range(1000+1): #doing ?+1 iterations
     dw=derivatives(X,y,w,b)[0]
     db=derivatives(X,y,w,b)[1]
     a=iteration(w,dw,b,db,alpha=0.01)
@@ -174,7 +174,7 @@ def aux_function(x1,w0,w1,b,boundary): #this function takes the parametes and dr
     #just write the model in order to the age
     #assuming w1 not zero
     #boundary=probability that it is malignant
-    x2=(np.log((1-boundary)/(boundary))-w0*x1-b)/w1
+    x2=(-np.log((1-boundary)/(boundary))-w0*x1-b)/w1
     return x2
 print(w[0])
 print(w[1])
@@ -187,8 +187,12 @@ plt.plot(line_2, aux_function(line_2,w[0],w[1],b,0.9))
 plt.legend(['', '0.01 threshold','0.7 threshold','0.9 threshold'], loc='upper left')
 plt.show()
 
+#I think that we get something similar to a straight line because the data we have is poor...
+
+"""
 w=[1,-0.2]
 b=1
 X=[1,15]
 print(X)
 print(model(X,w,b))
+"""

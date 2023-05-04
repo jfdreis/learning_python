@@ -1,7 +1,7 @@
 Size of tumor in cm^2, Age of patient, Malignat (0=not Malignant- 1=Malignant)
 1,10,0
 1,15,0
-1,20,0
+1,20,1
 1,25,1
 2,15,0
 2,20,0
